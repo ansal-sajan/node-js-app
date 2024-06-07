@@ -18,4 +18,3 @@ CMD [ "node", "app.js" ]
 
 # Document that the service listens on port 3000.
 EXPOSE 3000
-
