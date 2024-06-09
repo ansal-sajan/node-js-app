@@ -1,9 +1,10 @@
 name: Deploy to ECS
 
 on:
-  push:
-    branches:
-      - master  # Specify the branch you want to trigger the deployment from
+  workflow_run:
+    workflows: ["Build and Push Docker Image to ECR"]  # Name of the first workflow
+    types:
+      - completed
 
 jobs:
   deploy:
